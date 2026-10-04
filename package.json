@@ -1,0 +1,25 @@
+{
+  "name": "dashpod",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1111.0",
+    "nanoid": "^6.0.1",
+    "nuxt": "^4.5.2",
+    "undici": "^8.11.2",
+    "vue": "^3.5.41",
+    "vue-router": "^5.2.0",
+    "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.3"
+  }
+}
