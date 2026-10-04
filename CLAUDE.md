@@ -30,7 +30,7 @@ No lint script configured. Run one test file: `pnpm vitest run tests/validate.te
 - `STORAGE_LOCAL_PATH` — root dir for local storage (default `./data`).
 - `S3_BUCKET`, `S3_REGION`, `S3_ENDPOINT`, `S3_ACCESS_KEY_ID`, `S3_SECRET_ACCESS_KEY`, `S3_FORCE_PATH_STYLE` — only used when `STORAGE_TYPE=s3` (endpoint/force-path-style needed for MinIO/R2-style providers).
 
-Env vars are read at runtime through `appConfig()` in `server/utils/app-config.ts` — add new ones there. Don't put `process.env.X` into `runtimeConfig` in `nuxt.config.ts`: it's baked in at build time, so a production build would ignore the real environment.
+Env vars are read at runtime through `appConfig()` (which also loads `./.env` or `$ENV_FILE` once via `process.loadEnvFile`; real env vars take precedence) in `server/utils/app-config.ts` — add new ones there. Don't put `process.env.X` into `runtimeConfig` in `nuxt.config.ts`: it's baked in at build time, so a production build would ignore the real environment.
 
 ## Storage layout
 

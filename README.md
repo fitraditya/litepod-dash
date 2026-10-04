@@ -28,7 +28,9 @@ pnpm dev
 
 Open `http://localhost:3000`, sign in with the credentials from `.env`, and add your first node (its ID, IP/host, port, and the litepod `X-API-KEY`). Type the address as `https://host:port` (or tick TLS) for HTTPS agents.
 
-## Configuration (`.env`)
+## Configuration (`.env` or environment)
+
+Settings come from real environment variables, with a `.env` file as a fallback: dashpod reads `./.env` at startup (or the file named by `ENV_FILE`), and variables already set in the environment always win. On Vercel/Docker, just set the variables there; no `.env` file is needed.
 
 | Variable | Description |
 |---|---|
